@@ -371,7 +371,7 @@ namespace LPMP {
             if(debug()) {
                 std::cout << "lower bound before optimization = " << lp_.LowerBound() << "\n";
             }
-
+            std::cout.setstate(std::ios_base::failbit);
             LpControl c = visitor_.begin(this->lp_);
             this->Begin();
             while(!c.end && !c.error) {
